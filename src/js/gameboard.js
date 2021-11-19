@@ -6,6 +6,10 @@ const gameboard = () => {
         return map;
     }
 
+    function resetMap() {
+        map = _fillMap();
+    }
+
     function placeShip(ship) {
         if (_checkAvaliable(ship)) {
             shipList.push(ship);
@@ -65,7 +69,7 @@ const gameboard = () => {
     }
 
     function _checkHaveShip(x, y) {
-        if (map[x][y] == '')
+        if (map[x][y] == '' || map[x][y] == 'missed')
             return false;
         else
             return true;
@@ -75,7 +79,7 @@ const gameboard = () => {
         return [position.charAt(0), position.charAt(1)];
     }
 
-    return {getMap, placeShip, receiveAttack, isAllSunk};
+    return {getMap, resetMap, placeShip, receiveAttack, isAllSunk};
 }
 
 export default gameboard;

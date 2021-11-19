@@ -6,7 +6,10 @@ module.exports = {
     entry: {
         index: './src/js/index.js',
         ship: './src/js/ship.js',
-        gameBoard: './src/js/gameBoard.js', 
+        gameboard: './src/js/gameboard.js',
+        player: './src/js/player.js',
+        displayBoard: './src/js/displayBoard.js',
+        startGame: '/src/js/startGame.js', 
     },
     devtool: 'inline-source-map',
     devServer: {

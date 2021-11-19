@@ -15,14 +15,19 @@ const player = () => {
         return board;
     }
 
-    return {initMap, getBoard};
+    function resetBoard() {
+        board.resetMap();
+        initMap();
+    }
+
+    return {initMap, getBoard, resetBoard};
 }
 
 const _defaultShips = () => {
     const shipArr = [];
     const sample_position = 
         [['11'], ['33'], ['60'], ['91'],
-        ['22', '23'], ['57', '67'], ['34', '44'],
+        ['27', '28'], ['47', '57'], ['64', '74'],
         ['95', '96', '97'], ['25', '35', '45'],
         ['76', '77', '78', '79']];
     sample_position.forEach(position => {

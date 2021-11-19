@@ -1,0 +1,30 @@
+.boards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.board_name {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 500px;
+    height: 500px;
+}
+
+.grid {
+    background-color: rgb(164, 179, 226);
+    border: rgb(168, 155, 155) solid 1px;
+}
+
+.missed {
+    background-color: brown;
+}
+
+.ship {
+    background-color: rgb(27, 36, 85);
+    border: rgb(0, 0, 0) solid 1px;
+}
