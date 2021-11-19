@@ -9,7 +9,9 @@ module.exports = {
         gameboard: './src/js/gameboard.js',
         player: './src/js/player.js',
         displayBoard: './src/js/displayBoard.js',
-        startGame: '/src/js/startGame.js', 
+        startGame: '/src/js/startGame.js',
+        computerMove: '/src/js/computerMove.js',
+        render: '/src/js/render.js', 
     },
     devtool: 'inline-source-map',
     devServer: {

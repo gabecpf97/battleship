@@ -7,11 +7,7 @@ function render(gameboard, name) {
                 if (name == 'e') {
                     _enemyRender(square, i, j, map[i][j]);
                 } else {
-                    if (map[i][j] != 'missed') {
-                        square.classList.add('ship');
-                    } else {
-                        square.classList.add('missed');
-                    }
+                    _myRender(square, i, j, map[i][j]);
                 }
             }
         }
@@ -25,10 +21,24 @@ function _enemyRender(square, i, j, ship) {
         const status = ship.getStatus();
         const position = ship.getPosition();
         for (let k = 0; k < position.length; k++) {
-            if (position[k] = `${i}${j}` && status[k])
-                square.classList.add('ship');
+            if (position[k] == `${i}${j}` && status[k])
+                square.classList.add('hit');
         }
     }   
+}
+
+function _myRender(square, i, j, ship) {
+    if (ship != 'missed') {
+        square.classList.add('ship');
+        const status = ship.getStatus();
+        const position = ship.getPosition();
+        for (let k = 0; k < position.length; k++) {
+            if (position[k] == `${i}${j}` && status[k])
+                square.classList.add('hit');
+        }
+    } else {
+        square.classList.add('missed');
+    }
 }
 
 export default render;
