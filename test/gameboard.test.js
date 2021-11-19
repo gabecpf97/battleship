@@ -67,15 +67,3 @@ test('overlapping placement', () => {
         expect(e.message).toBe('already exist a ship in this position');
     }
 });
-
-function _getEmptyMap() {
-    const wholeMap = [];
-    for (let i = 0; i < 10; i++) {
-        const row = []
-        for (let j = 0; j < 10; j++) {
-            row.push("");
-        }
-        wholeMap.push(row);
-    }
-    return wholeMap;
-}

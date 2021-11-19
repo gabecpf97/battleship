@@ -1,12 +1,7 @@
-const ship = (position, id) => {
-    let myId = id;
+const ship = (position) => {
     let myLength = position.length;
     let myPosition = position;
     let myStatus = _initStatus();
-
-    function getId() {
-        return myId;
-    }
 
     function getPosition() {
         return myPosition;
@@ -44,7 +39,7 @@ const ship = (position, id) => {
         return true;
     }
 
-    return {getId, getPosition, changePosition, getStatus, hit, isSunk};
+    return {getPosition, changePosition, getStatus, hit, isSunk};
 }
 
 export default ship;

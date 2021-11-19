@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         index: './src/js/index.js',
         ship: './src/js/ship.js',
+        gameBoard: './src/js/gameBoard.js', 
     },
     devtool: 'inline-source-map',
     devServer: {
