@@ -38,6 +38,10 @@ h1 {
     border: rgb(0, 0, 0) solid 1px;
 }
 
+.changeCursor {
+    cursor: pointer;
+}
+
 .result {
     display: flex;
     flex-direction: column;
