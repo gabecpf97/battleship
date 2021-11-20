@@ -33,11 +33,32 @@ function _myRender(square, i, j, ship) {
         const status = ship.getStatus();
         const position = ship.getPosition();
         for (let k = 0; k < position.length; k++) {
+            _addShipClass(position, square);
             if (position[k] == `${i}${j}` && status[k])
                 square.classList.add('hit');
         }
     } else {
         square.classList.add('missed');
+    }
+}
+
+function _addShipClass(position, square) {
+    switch (position.length) {
+        case 1:
+            square.classList.add('sml');
+            break;
+
+        case 2:
+            square.classList.add('mid');
+            break;
+
+        case 3:
+            square.classList.add('lrg');
+            break;
+
+        case 4:
+            square.classList.add('max');
+            break;
     }
 }
 

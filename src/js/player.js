@@ -1,4 +1,5 @@
 import gameboard from "./gameboard";
+import randomPlacement from "./randomPlacement";
 import ship from "./ship";
 
 const player = () => {
@@ -6,8 +7,11 @@ const player = () => {
     const default_ships = _defaultShips();
 
     function initMap() {
-        default_ships.forEach(ship => {
-            board.placeShip(ship);
+        // default_ships.forEach(ship => {
+        //     board.placeShip(ship);
+        // });
+        randomPlacement().getRandomPosition().forEach(position => {
+            board.placeShip(ship(position));
         });
     }
 

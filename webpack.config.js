@@ -11,7 +11,9 @@ module.exports = {
         displayBoard: './src/js/displayBoard.js',
         startGame: '/src/js/startGame.js',
         computerMove: '/src/js/computerMove.js',
-        render: '/src/js/render.js', 
+        render: '/src/js/render.js',
+        resetGame: './src/js/resetGame.js', 
+        randomPlacement: './src/js/randomPlacement.js',
     },
     devtool: 'inline-source-map',
     devServer: {
