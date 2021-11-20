@@ -9,7 +9,6 @@ const randomPlacement = () => {
                 locations.push(shipPos);
             }
         }
-        console.log(locations);
         return locations;
     }
 

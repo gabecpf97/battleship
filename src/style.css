@@ -20,12 +20,12 @@ h1 {
 }
 
 .grid {
-    background-color: rgb(164, 179, 226);
+    background-color: rgb(230, 232, 238);
     border: rgb(168, 155, 155) solid 1px;
 }
 
 .missed {
-    background-color: brown;
+    background-color: rgb(77, 74, 74);
 }
 
 .ship {
@@ -34,8 +34,8 @@ h1 {
 }
 
 .hit {
-    background-color: dimgray !important;
-    border: rgb(0, 0, 0) solid 1px;
+    background-color: rgb(247, 0, 0) !important;
+    border: rgb(36, 29, 29) solid 1px;
 }
 
 .changeCursor {
